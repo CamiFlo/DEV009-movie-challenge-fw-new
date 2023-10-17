@@ -1,6 +1,10 @@
 import { useState } from 'react'
-import{ Header} from './components/Header.jsx'
 import './App.css'
+import './components/Movie.css'
+import './components/Footer.css'
+import{ Header} from './components/Header.jsx'
+import  BoardMovies  from './components/Movie.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
  // const [count, setCount] = useState(0)
@@ -9,6 +13,8 @@ function App() {
 return(
 <>
  <Header/>
+ <BoardMovies/>
+ <Footer/>
 </>
 )
 
