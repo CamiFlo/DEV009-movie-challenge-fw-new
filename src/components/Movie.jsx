@@ -27,7 +27,7 @@ export function BoardMovies() {
   return (
     <>
       <div className="movies-row1">
-        {movies.slice(0, 5).map((movie) => (
+        {movies.slice(0, 4).map((movie) => (
           <Movie
             key={movie.id}
             title={movie.title}
