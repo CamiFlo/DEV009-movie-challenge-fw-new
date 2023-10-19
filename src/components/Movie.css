@@ -5,14 +5,14 @@
   
 .movies-row1{
     display: flex;
-    flex-wrap: wrap; /* Permite que las películas se envuelvan en la siguiente línea si no caben en la actual */
+    flex-wrap: wrap; 
     justify-content: center;
     margin-top: 10%;
   }
 
 .movies-row2{
     display: flex;
-    flex-wrap: wrap; /* Permite que las películas se envuelvan en la siguiente línea si no caben en la actual */
+    flex-wrap: wrap; 
     justify-content: center;
     margin-top: 2%;
    

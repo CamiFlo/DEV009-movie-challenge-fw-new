@@ -1,43 +1,51 @@
-function Movie() {
-    return (
-        <div className="movie">
-            <div className="movie-poster">
-                <a href="https://www.themoviedb.org/movie" target="_blank" rel="noopener noreferrer">
-                    <img
-                        className="poster"
-                        src="https://www.themoviedb.org/t/p/original/bhlf38aasEZjgdWQOzXwMhaOvGU.jpg"
-                        alt="poster wild style"
-                        width={150}
-                        height={200}
-                    />
-                </a>
-                <span className="title">Wild Style</span>
-                <span className="year">1982</span>
-            </div>
-        </div>
-    )
+import React from 'react';
+import MoviesApi from './Api.jsx'
+
+function Movie({ title, releaseDate, posterPath }) {
+  return (
+    <div className="movie">
+      <div className="movie-poster">
+        <a href="https://www.themoviedb.org/movie" target="_blank" rel="noopener noreferrer">
+          <img
+            className="poster"
+            src={`https://www.themoviedb.org/t/p/original/${posterPath}`}
+            alt={`poster ${title}`}
+            width={150}
+            height={200}
+          />
+        </a>
+        <span className="title">{title}</span>
+        <span className="year">{releaseDate}</span>
+      </div>
+    </div>
+  );
 }
 
 export function BoardMovies() {
-    return (
-        <>
-            <div className='movies-row1'>
-                <Movie />
-                <Movie />
-                <Movie />
-                <Movie />
-                <Movie />
-            </div>
-            <div className='movies-row2'>
-                <Movie />
-                <Movie />
-                <Movie />
-                <Movie />
-                <Movie />
-            </div>
-        </>
-    );
+  const movies = MoviesApi();
 
-
+  return (
+    <>
+      <div className="movies-row1">
+        {movies.slice(0, 5).map((movie) => (
+          <Movie
+            key={movie.id}
+            title={movie.title}
+            releaseDate={movie.release_date}
+            posterPath={movie.poster_path}
+          />
+        ))}
+      </div>
+      <div className="movies-row2">
+        {movies.slice(5, 10).map((movie) => (
+          <Movie
+            key={movie.id}
+            title={movie.title}
+            releaseDate={movie.release_date}
+            posterPath={movie.poster_path}
+          />
+        ))}
+      </div>
+    </>
+  );
 }
-export default BoardMovies;
