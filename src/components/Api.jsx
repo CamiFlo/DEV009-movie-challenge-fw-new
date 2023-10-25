@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Movie from './Movie.jsx'
+import Movie from './Movie'
 
 function MoviesApi  () {
 
@@ -10,7 +10,8 @@ function MoviesApi  () {
 
         console.log()
 
-        const url = `https://api.themoviedb.org/3/account/20556212/favorite/movies?language=en-US&page=1&sort_by=created_at.asc`;
+        const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`;
+
         fetch(url)
         .then(res => res.json())
         .then(json => setMoviesList(json.results))

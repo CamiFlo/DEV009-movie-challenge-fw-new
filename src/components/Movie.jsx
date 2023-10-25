@@ -1,5 +1,5 @@
 import React from 'react';
-import MoviesApi from './Api.jsx'
+import MoviesApi from './Api'
 
 function Movie({ title, releaseDate, posterPath }) {
   return (
@@ -14,8 +14,8 @@ function Movie({ title, releaseDate, posterPath }) {
             height={200}
           />
         </a>
-        <span className="title">{title}</span>
-        <span className="year">{releaseDate}</span>
+        <a className="title">{title}</a>
+        <a className="year">{releaseDate}</a>
       </div>
     </div>
   );
