@@ -1,5 +1,5 @@
 import React from 'react';
-import MoviesApi from './Api'
+import MoviesApi from './Api.jsx'
 
 function Movie({ title, releaseDate, posterPath }) {
   return (
