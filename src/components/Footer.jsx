@@ -6,7 +6,7 @@ import navigate_next from '../assets/navigate_next.svg'
 
 export default function Footer() {
     return (
-      <div className="pagination">
+      <footer className="pagination">
         <button className="first"></button>
             <img src={first_page} alt="First" className="icon" />
         <button className="previous"></button>
@@ -17,7 +17,7 @@ export default function Footer() {
             <img src={navigate_next} alt="First" className="icon" />
         <button className="back"></button>
             <img src={last_page} alt="First" className="icon" />
-      </div>
+      </footer>
     );
   }
 
