@@ -34,6 +34,10 @@
   cursor: pointer
 }
 
+.moviePoster:hover{
+  opacity: 0.8;
+}
+
 .movieTitle {
   font-family: "the bold font";
   src: url("src\assets\THE BOLD FONT - FREE VERSION - 2023.ttf") format("truetype");
