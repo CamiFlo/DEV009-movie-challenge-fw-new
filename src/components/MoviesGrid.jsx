@@ -2,9 +2,9 @@ import MovieCard from "./MovieCard";
 import styles from './MoviesGrid.module.css';
 
 export default function MoviesGrid() {
-  //const movies = MoviesApi();
+  
 
-  const movies = []; // arreglo de peliculas recibidas por la api?
+  let movies = []; // arreglo de peliculas recibidas por la api?
   return (
     <ul className={styles.moviesGrid}>
       {movies.map((movie) => (

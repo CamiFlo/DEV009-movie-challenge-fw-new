@@ -9,10 +9,10 @@ import MovieDetails from './pages/MovieDetails'
 import Footer from "./components/Footer.jsx";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Link
-} from "react-router-dom";
+} from "../node_modules/react-router-dom";
+import Switch from '../node_modules/react-router-dom'
 
 export default function App() {
   return (
@@ -32,7 +32,7 @@ export default function App() {
 
         <Switch>
           <Route path="/"><Home /></Route>
-          <Route exact path="/movie"><Movie /></Route>
+          <Route exact path="/movie"><MovieDetails /></Route>
           <Route path="/"><Home /></Route>
         </Switch>
       </div>
