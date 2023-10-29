@@ -1,22 +1,25 @@
 import { useParams } from "react-router-dom";
 import styles from "./MovieDetails.module.css";
 import { useEffect, useState } from "react";
+import get  from '../api/services'
 
 export default function MovieDetails() {
 const {movieId} = useParams();
 const[movie, setMovie] = useState(null);
 
 useEffect(() => {
-    get('/movie/' + movieId).then(data =>{
+    get(`/movie/'${movieId} `).then(data =>{
         setMovie(data);
 
     });
 }, [movieId] //arreglo de dependencias para que se ejecute cada vez que cambia el movieId
 );
 
+if (!movie){
+    return null; // nulo por defecto
+}
 
-
-  const imageUrl = "http://image.tmdb.org/t/p/w500" + movie.poster_path;
+  const imageUrl = `http://image.tmdb.org/t/p/w500 ${movie.poster_path}`;
   return (
     <div className={styles.detailsContainer}>
       <img className={styles.column} src={imageUrl} alt={movie.title}></img>

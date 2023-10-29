@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import Movie from './MovieCard'
+
 
 function MoviesApi  () {
 
@@ -36,4 +36,3 @@ function MoviesApi  () {
 }
 
 
-export default MoviesApi

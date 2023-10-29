@@ -9,19 +9,22 @@
   width: 80%;
   margin: 15px;
 }
+
+@font-face {
+  font-family: 'The Bold Font';
+  src: url('../assets/THE-BOLD-FONT-FREE-VERSION-2023.ttf') format('truetype');
+}
+
 .title {
-  font-family: "the bold font";
+  font-family: 'The Bold Font', sans-serif;
   font-size: 1rem;
-  src: url("src\assets\THE BOLD FONT - FREE VERSION - 2023.ttf")
-    format("truetype");
 }
 
 .year {
-  font-family: "the bold font";
+  font-family: 'The Bold Font', sans-serif;
   font-size: 0.5rem;
-  src: url("src\assets\THE BOLD FONT - FREE VERSION - 2023.ttf")
-    format("truetype");
 }
+
 
 .descriptionText {
   font-family: "M PLUS Rounded 1c", sans-serif;

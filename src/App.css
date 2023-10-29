@@ -4,35 +4,12 @@
 
 body {
   background-color: black;
-  background-image: url('../assets/background_black.png');
+  background-image: url('./assets/background_black.png');
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
 }
 
-
-/*:root  {
-  background-image: url('./assets/background_black.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  /*filter: brightness(90%) contrast(170%) opacity(0.6) saturate(90%) saturate(80%);
-  box-shadow: 10px 10px 5px rgb(27, 27, 32);
-}*/
-
-
-/*:root::before{
-  background-color: rgba(0, 0, 0, 0.5)
-}*/
-
-/* -- HEADER -- 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; 
-}*/
 
 
 
