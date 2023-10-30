@@ -41,7 +41,7 @@
 
 .movieTitle {
   font-family: 'Outfit', sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   color: rgba(209, 204, 204, 0.95);
   margin-top: 0%;
@@ -50,8 +50,8 @@
 
 .movieYear {
   font-family: 'Outfit', sans-serif;
-  font-size: 1em;
-  color: rgba(108, 107, 107, 0.98);
+  font-size: 0.5em;
+  color: rgba(239, 236, 236, 0.7);
   margin-top: 0%;
   margin-bottom: 0%;
 }
