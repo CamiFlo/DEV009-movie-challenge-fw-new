@@ -15,9 +15,10 @@ useEffect(() => {
 }, [movieId] //arreglo de dependencias para que se ejecute cada vez que cambia el movieId
 );
 
+/*
 if (!movie){
     return null; // nulo por defecto
-}
+}*/
 
   const imageUrl = `http://image.tmdb.org/t/p/w500 ${movie.poster_path}`;
   return (

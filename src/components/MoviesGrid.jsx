@@ -4,11 +4,17 @@ import MovieCard from "./MovieCard";
 import styles from './MoviesGrid.module.css';
 
 export default function MoviesGrid() {
+  console.log('MoviesGrid')
   const [movies, setMovies] = useState([]);
     useEffect(() => {
-      get('/discover/movie').then((data) => {
+     console.log(get() ) 
+      
+      /*.then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));*/
+      /*.then((data) => {
         setMovies(data.results);
-      });
+      });*/
     }, []
 
     );

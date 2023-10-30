@@ -11,13 +11,22 @@ import {
   Route,
   Link,
   Routes,
-  Switch,
 } from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
-      <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:movieId" element={<MovieDetails />} />
+      </Routes>
+    </Router>
+  );
+}
+
+  /*return (
+    <Router>
+      <main>
         <Switch>
           <Route exact path="/">
             <Home />
@@ -26,10 +35,22 @@ export default function App() {
             <MovieDetails />
           </Route>
         </Switch>
-      </div>
+      </main>
     </Router>
   );
-}
+}*/
+
+/*
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:movieId" element={<MovieDetails />} />
+      </Routes>
+    </Router>
+  );
+}*/
 
 /*<Route path="/page2">
 <Page2/>
