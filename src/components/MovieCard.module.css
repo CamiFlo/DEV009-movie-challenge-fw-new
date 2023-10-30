@@ -38,13 +38,9 @@
   opacity: 0.8;
 }
 
-@font-face {
-  font-family: 'The Bold Font';
-  src: url('../assets/THE-BOLD-FONT-FREE-VERSION-2023.ttf') format('truetype');
-}
 
 .movieTitle {
-  font-family: 'The Bold Font', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1.5em;
   font-weight: bold;
   color: rgba(209, 204, 204, 0.95);
@@ -53,7 +49,7 @@
 }
 
 .movieYear {
-  font-family: 'The Bold Font', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 1em;
   color: rgba(108, 107, 107, 0.98);
   margin-top: 0%;

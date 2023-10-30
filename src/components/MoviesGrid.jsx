@@ -7,17 +7,16 @@ export default function MoviesGrid() {
   console.log('MoviesGrid')
   const [movies, setMovies] = useState([]);
     useEffect(() => {
-     console.log(get() ) 
-      
-      /*.then(response => response.json())
+     get().then(response => response.json())
         .then(response => console.log(response))
-        .catch(err => console.error(err));*/
+        .catch(err => console.error(err));
       /*.then((data) => {
-        setMovies(data.results);
-      });*/
-    }, []
-
-    );
+        setMovies(data.results);*/
+      })
+    }, [] ;
+    function get(){
+      return fetch(url)
+    }
 
   //let movies = []; // arreglo de peliculas recibidas por la api?
   return (
@@ -33,6 +32,6 @@ export default function MoviesGrid() {
       ))}
     </ul>
   );
-}
+
 
   // {movies.slice(0, 9).map((movie) => 
