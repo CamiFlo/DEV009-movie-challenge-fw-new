@@ -4,7 +4,7 @@
 
 - Uso de React Router con Router/Routes/Route y Link.
 - Aprendí que Switch ya no se usa en V6 :P
-Consumir la Api
+- Consumir la Api
 - Ir ordenando el proyecto en componentes, páginas/vistas, servicios y como van comunicándose entre si.
 - Aprendí a usar module.css como otra forma de da estilo a los componentes.
 
