@@ -1,30 +1,10 @@
-/*.board-movies {
-    display: flex;
-    flex-direction: column;
-  }
-  
-.movies-row1{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    margin-top: 10%;
-  }
 
-.movies-row2{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    margin-top: 2%;
-   
-  }/*
-
-  /* -- MOVIE contenedor 1 pelicula -- */
 .movieCard {
   list-style: none;
 }
 
 .moviePoster {
-  border: 1px solid #ccc;
+  border: 0.1px solid #807f7f;
   background-color: darkgray;
   font-family: "the bold font";
   margin-left: 0%;
@@ -41,17 +21,19 @@
 
 .movieTitle {
   font-family: 'Outfit', sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   color: rgba(209, 204, 204, 0.95);
   margin-top: 0%;
   margin-bottom: 0%;
+  padding-left: 20px;
 }
 
 .movieYear {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.5em;
-  color: rgba(239, 236, 236, 0.7);
+  font-size: 1em;
+  color: rgba(239, 236, 236, 0.5);
   margin-top: 0%;
   margin-bottom: 0%;
+  padding-left: 20px;
 }

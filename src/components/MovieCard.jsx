@@ -16,7 +16,7 @@ export default function MovieCard({ movie }) {
       />
       
       <h4 className={styles.movieTitle}>{movie.title}</h4>
-      <h5 className={styles.movieYear}>{movie.release_date}</h5>
+      <h5 className={styles.movieYear}>{movie.release_date.slice(0, 4)}</h5>
     </li>
   );
 }

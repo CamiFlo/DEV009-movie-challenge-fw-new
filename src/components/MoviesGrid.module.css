@@ -4,4 +4,13 @@
     gap: 40px;
     padding: 40px;
     justify-content: center;
+    padding-top: 130px;
+    background-image: url('../assets/background_black.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black; /* Fallback color en caso de que la imagen no se cargue */
+    min-height: 100vh; /* Asegura que el contenedor abarque al menos toda la altura de la ventana */
+    margin: 0%;
+  
 }

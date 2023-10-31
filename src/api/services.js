@@ -1,4 +1,6 @@
 //const urlApi = 'https://api.themoviedb.org/3/'
+//const apiKey = '43846ec1e0402fe049b4eb22b44a3aeb';
+
 export default function getMovies(){
     const apiKey = '43846ec1e0402fe049b4eb22b44a3aeb';
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc`;

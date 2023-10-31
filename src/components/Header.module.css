@@ -1,8 +1,11 @@
-/*.headerContainer{
-display: grid;
+.headerContainer{
+  transition: top 0.3s;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 0%;
+/*display: grid;
 grid-template-columns: auto auto; 
-  align-items: center; 
-}*/
+  align-items: center; */
+}
 
 .logo50 {
     height: 8em;
@@ -11,6 +14,7 @@ grid-template-columns: auto auto;
     position: fixed;
     top: 0;
     left: 0;
+    padding-bottom: 0%;
 }
 
 
