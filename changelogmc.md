@@ -1,3 +1,34 @@
+## 1.1.1 - 2013.10.31
+
+### Sprint learnings
+
+- Uso de React Router con Router/Routes/Route y Link.
+- Aprendí que Switch ya no se usa en V6 :P
+Consumir la Api
+- Ir ordenando el proyecto en componentes, páginas/vistas, servicios y como van comunicándose entre si.
+- Aprendí a usar module.css como otra forma de da estilo a los componentes.
+
+### Added
+- Conexión con la API
+- React Router para que la App funciones como SPA
+- Módulos de CSS para componentes
+
+
+### Changed
+
+- Cambié etiquetas de HTML de `div ` y `< p >`a etiquetas más especificas como li, ul, h4, nav que no habia usado antes
+- Separé en carpetas components, pages y services
+
+### Fixed
+
+- Estuve usando Switch de React Router que no funcionaba, hasta reemplazarlo por Routes.
+- Consumo de la Api, no traia la data, pues no la estaba retornando y no la estaba llamando correctamente en el componente.
+
+### Removed
+
+- eliminé el componente Api y lo reemplacé por una carpeta Services y archivo api.js
+
+
 ## 1.0.0 - 2013.10.18
 
 
