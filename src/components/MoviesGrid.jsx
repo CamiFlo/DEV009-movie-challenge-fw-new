@@ -1,27 +1,35 @@
 import { useEffect, useState } from "react";
-import  get  from '../api/services';
+import  getMovies  from '../api/services';
 import MovieCard from "./MovieCard";
 import styles from './MoviesGrid.module.css';
 
-export default function MoviesGrid() {
-  console.log('MoviesGrid')
-  const [movies, setMovies] = useState([]);
-    useEffect(() => {
-     get().then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-      /*.then((data) => {
-        setMovies(data.results);*/
-      })
-    }, [] ;
-    function get(){
-      return fetch(url)
-    }
 
-  //let movies = []; // arreglo de peliculas recibidas por la api?
+export default function MoviesGrid() {
+  console.log('MoviesGrid');
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    getMovies()
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Error: Not Found');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data); 
+        setMovies(data.results); // Actualizar el estado con los datos recibidos
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
+
+
   return (
     <ul className={styles.moviesGrid}>
-      {movies.map((movie) => (   //L19
+      {movies.map((movie) => (   
         <MovieCard
           key={movie.id}
           movie={movie}
@@ -33,5 +41,26 @@ export default function MoviesGrid() {
     </ul>
   );
 
+}
+  // {movies.slice(0, 9).map((movie) 
+  
+/*export default function MoviesGrid() {
+  console.log('MoviesGrid')
+  const [movies, setMovies] = useState([]);
+    useEffect(() => {
+    console.log(get()) 
+     /*.then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));*/
+      /*.then((data) => {
+        setMovies(data.results);*/
+    //  })
+    //}, [] ; 
+    
+  
+  
+   
+     // return fetch(url)
+    
 
-  // {movies.slice(0, 9).map((movie) => 
+  //let movies = []; // arreglo de peliculas recibidas por la api?
