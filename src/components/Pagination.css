@@ -1,0 +1,34 @@
+.pagination {
+  position: fixed;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.pagination > * {
+  margin: 0 10px; /* Espacio de 10px a izquierda y derecha para cada hijo directo de .pagination */
+}
+
+.pagination button {
+  color: rgb(169, 169, 164);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination .icon {
+  font-size: 1.5rem;
+  margin: 0px;
+  background-color: transparent;
+}
+
+.page-number {
+  color: rgb(169, 169, 164);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+}

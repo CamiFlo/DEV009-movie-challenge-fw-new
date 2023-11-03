@@ -2,9 +2,11 @@
   transition: top 0.3s;
   background-color: rgba(0, 0, 0, 0.6);
   padding-bottom: 0%;
-/*display: grid;
-grid-template-columns: auto auto; 
-  align-items: center; */
+  width: 100%; 
+  display: grid;
+  grid-template-columns: auto auto; 
+  align-items: center; 
+  gap: 10px;
 }
 
 .logo50 {
@@ -24,7 +26,7 @@ grid-template-columns: auto auto;
   letter-spacing: -2px;
   font-stretch: expanded;
   position: fixed;
-  margin-left: 8%;
-  margin-top: 1em;
+  margin-left: 15%;
+  margin-top: 3.5em;
   color: rgb(161, 159, 159);
 }
