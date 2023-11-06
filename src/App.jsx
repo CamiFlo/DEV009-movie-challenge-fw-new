@@ -1,10 +1,9 @@
 import React from "react";
 import "./App.css";
 import "./components/Pagination.css";
-import Header from "./components/Header.jsx";
 import Home from "./pages/Home";
-import Page2 from "./pages/Page2";
-import MovieDetails from "./pages/MovieDetails";
+import MovieDetails from './pages/MovieDetails'
+import MoviesGrid from "./components/MoviesGrid"
 import {
   BrowserRouter as Router,
   Route,
@@ -18,7 +17,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page2" element={<Page2 />} />
+        <Route path="/page/:pageNumber" element={<MoviesGrid/>} />
         <Route path="/movie/:movieId" element={<MovieDetails />} />
       </Routes>
     </Router>

@@ -5,10 +5,10 @@ import MovieCard from "./MovieCard";
 import styles from "./MoviesGrid.module.css";
 import Pagination from "./Pagination";
 
-export default function MoviesGrid({ url, page }) {
+export default function MoviesGrid({  page }) {
   const [movies, setMovies] = useState([]);
   const [moviesPerPage, setMoviesPerPage]= useState(10); //pelis por página
-  const [totalPages, setTotalPages] = useState(4);  //total de páginas
+  const [totalPages, setTotalPages] = useState(null);  //total de páginas
   const [currentPage, setCurrentPage] = useState(1); //página actual
   const navigate = useNavigate();
   const totalMovies = movies.length; //cantidad de pelis que trae la api
@@ -28,6 +28,7 @@ export default function MoviesGrid({ url, page }) {
         console.log(data)
         setMovies(data.results);
         setTotalPages(data.total_pages);
+     
       })
       .catch(error => {
         console.error('Error fetching data:', error);

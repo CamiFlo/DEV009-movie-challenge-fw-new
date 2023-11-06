@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import {
   MdFirstPage,
   MdChevronLeft,
@@ -7,14 +9,17 @@ import {
 
 export default function Pagination({ currentPage, totalPages, setCurrentPage, moviesPerPage }) {
   const goToFirstPage = () => {
+
     setCurrentPage(1);
   };
 
   const goToNextPage = () => {
-    if (currentPage < totalPages) {
+    setCurrentPage(currentPage + 1);
+  };
+    /*if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
-  };
+  };*/
 
   const goToLastPage = () => {
     setCurrentPage(totalPages);
