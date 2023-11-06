@@ -7,27 +7,23 @@ import {
   MdLastPage,
 } from "react-icons/md";
 
-export default function Pagination({ currentPage, totalPages, setCurrentPage, moviesPerPage }) {
-  const goToFirstPage = () => {
 
-    setCurrentPage(1);
+export default function Pagination({ currentPage, totalPages, onPageChange, moviesPerPage }) {
+  const goToFirstPage = () => {
+    onPageChange(1);
   };
 
   const goToNextPage = () => {
-    setCurrentPage(currentPage + 1);
+    onPageChange(currentPage + 1);
   };
-    /*if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };*/
 
   const goToLastPage = () => {
-    setCurrentPage(totalPages);
+    onPageChange(totalPages);
   };
 
   const goToPreviousPage = () => {
     if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+      onPageChange(currentPage - 1);
     }
   }
 

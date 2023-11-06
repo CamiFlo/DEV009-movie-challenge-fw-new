@@ -9,7 +9,7 @@ export default function getMovies(page) {
       }
     };
   
-    const url = `${urlApi}discover/movie?api_key=${apiKey}&include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&release_date.gte=1970&release_date.lte=1980&sort_by=popularity.desc`;
+    const url = `${urlApi}discover/movie?api_key=${apiKey}&include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&release_date.gte=1970&release_date.lte=1979&sort_by=popularity.desc`;
   
     return fetch(url, options)
 

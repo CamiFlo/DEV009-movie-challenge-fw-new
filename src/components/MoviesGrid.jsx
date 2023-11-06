@@ -17,13 +17,7 @@ export default function MoviesGrid({  page }) {
 
   useEffect(() => {
     getMovies(currentPage)
-      /*.then(response => {
-        console.log(response)
-        if (!response.ok) {
-          throw new Error('Error: Not Found');
-        }
-        return response.json();
-      })*/
+
       .then(data => {
         console.log(data)
         setMovies(data.results);
@@ -46,7 +40,7 @@ export default function MoviesGrid({  page }) {
 
   const startIndex = (currentPage - 1) * moviesPerPage;
   const endIndex = startIndex + moviesPerPage;
-  const moviesOnCurrentPage = movies.slice(startIndex, endIndex);
+  const moviesOnCurrentPage = movies;
 
   return (
     <div>
@@ -67,7 +61,7 @@ export default function MoviesGrid({  page }) {
         moviesPerPage={moviesPerPage}
         currentPage={currentPage}
         totalPages={totalPages}
-        onPageChange={handlePageChange}
+        onPageChange={(newPage)=> setCurrentPage(newPage)} 
         totalMovies={totalMovies}
       />
     </div>
