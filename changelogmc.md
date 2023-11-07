@@ -1,4 +1,27 @@
-## 1.1.1 - 2013.10.31
+## 1.1.2 - 2023.11.08
+
+### Sprint learnings
+- Dar funcionalidad a pagination
+- usar iconos de react para la paginación
+- usar tipografias en el proyecto desde la carpeta fonts en assets e impotarlas en css
+
+
+### Added
+- Componente Pagination, con uso dinámico de las páginas
+
+### Changed
+
+- Cambié el nombre de footer a pagination.
+- Pagination lo movié de App a MoviesGrid
+
+
+### Fixed
+
+- No se visualizaban las peliculas por página, solo se veia en consola, ahora ya se renderiza el objeto cuando se cambia la página
+
+
+
+## 1.1.1 - 2023.10.31
 
 ### Sprint learnings
 
@@ -29,7 +52,7 @@
 - eliminé el componente Api y lo reemplacé por una carpeta Services y archivo api.js
 
 
-## 1.0.0 - 2013.10.18
+## 1.0.0 - 2023.10.18
 
 
 
