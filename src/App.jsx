@@ -17,7 +17,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page/:pageNumber" element={<MoviesGrid/>} />
+        <Route path="/movies" element={<MoviesGrid/>} />
         <Route path="/movie/:movieId" element={<MovieDetails />} />
       </Routes>
     </Router>

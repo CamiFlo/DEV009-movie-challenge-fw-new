@@ -1,4 +1,4 @@
-export default function getMovies(page) {
+export default  function getMovies(page, genreId, release_date) {
     const urlApi = 'https://api.themoviedb.org/3/';
     const apiKey = '43846ec1e0402fe049b4eb22b44a3aeb';
     const options = {
@@ -9,12 +9,13 @@ export default function getMovies(page) {
       }
     };
   
-    const url = `${urlApi}discover/movie?api_key=${apiKey}&include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&release_date.gte=1970&release_date.lte=1979&sort_by=popularity.desc`;
+    const url = `${urlApi}discover/movie?api_key=${apiKey}&include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&release_date.gte=1970&release_date.lte=1979&sort_by=popularity.desc&with_genres=${genreId}`;
   
     return fetch(url, options)
 
       .then(response => {
         console.log(url)
+        console.log(genreId)
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
@@ -26,6 +27,8 @@ export default function getMovies(page) {
       });
   }
   
+  
+
 
 
 

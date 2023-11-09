@@ -1,0 +1,22 @@
+
+
+export const getGenres = async () => {
+  const url = 'https://api.themoviedb.org/3/genre/movie/list?language=en';
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0Mzg0NmVjMWUwNDAyZmUwNDliNGViMjJiNDRhM2FlYiIsInN1YiI6IjY1MjcxOGE4NmRlYTNhMDBhZDVhODg1ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.7EVGy2BoBUehnQ7xF46L6QcxN4iONDfKJQDfycSHlGc'
+    }
+  };
+
+  try {
+    const response = await fetch(url, options);
+    const data = await response.json();
+    return data.genres;
+   
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    throw new Error('Error al obtener los géneros de la API');
+  }
+};

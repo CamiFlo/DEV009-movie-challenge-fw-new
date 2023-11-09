@@ -13,6 +13,8 @@ export default function MoviesGrid({  page }) {
   const navigate = useNavigate();
   const totalMovies = movies.length; //cantidad de pelis que trae la api
 
+
+
   console.log("MoviesGrid");
 
   useEffect(() => {
